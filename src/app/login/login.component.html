@@ -10,10 +10,11 @@ Password :    <input type="password" name="password" [(ngModel)]="password"/>
 <button class="btn btn-success" (click)=login()>Login</button>
 </div>
 </div> -->
-
+<!-- <app-menu></app-menu> -->
 <div class="container" class="shifting">
-    <h3>PMO Utility Management</h3>
+    <h3>ZIZA</h3>
 <!-- <div class="alert alert-warning" ></div> -->
+<div class="alert alert-warning" *ngIf="invalidLogin">{{errorMessage}}</div>
 <form role="form" class="form-validation" [formGroup]="loginForm">
     <div class="form-row">
       <div class="form-group col-md-4">
