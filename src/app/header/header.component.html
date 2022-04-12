@@ -1,1 +1,3 @@
-<p>header works!</p>
+<div align="right" *ngIf="isUserLoggedIn()">
+<button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
+</div>
