@@ -1,0 +1,55 @@
+<div class="container" style="background-color: #969696">
+  <form role="form" class="form-validation" [formGroup]="movieDetails" *ngIf="view">
+    <h3>Please provide your movie details</h3>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label class="control-label col-sm-4">Choose City</label>
+        <select name="city" class="form-control col-sm-12" formControlName="city">
+          <option>Delhi</option>
+          <option>Mumbai</option>
+          <option>Hyderabad</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label class="control-label col-sm-4">Choose Time</label>
+        <select class="form-control col-sm-12" formControlName="time">
+          <option>06 AM - 09 AM</option>
+          <option>10 AM - 01 PM</option>
+          <option>02 PM - 05 PM</option>
+          <option>06 PM - 09 PM</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label class="control-label col-sm-4">Choose Seats</label>
+        <select class="form-control col-sm-12" formControlName="seats">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <br /><br />
+  <div>
+    <app-confirmation *ngIf="isconfirmation"
+    [city]="city"
+    [time]="time"
+    [seats]="seats"
+    (isEdit)="editDetaisl($event)"></app-confirmation>
+  </div>
+  <div style="align-content: flex-end" *ngIf="view">
+    <button
+      type="button"
+      class="btn btn-primary"
+      style="align-items: center"
+      (click)="movieDetailsValues(movieDetails.value)"
+    >
+      <span>Next</span>
+    </button>
+  </div>
+</div>
+<br/>

@@ -11,6 +11,14 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { OutputComponent } from './test/output/output.component';
+import { ParentComponent } from './test/parent/parent.component';
+import { ChildComponent } from './test/child/child.component';
+import { PaymentComponent } from './payment/payment.component';
+import { QuestionsComponent } from './test/questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +27,22 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
+    MovieDetailsComponent,
+    ConfirmationComponent,
+    OutputComponent,
+    ParentComponent,
+    ChildComponent,
+    PaymentComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]

@@ -1,0 +1,33 @@
+
+<!-- <app-movie-details (movies)="moviesdetls($event)"> </app-movie-details> -->
+<div class="container" style="background-color: #969696">
+<div style="height: max-content">
+    <h1>Selected City: {{ city }}</h1>
+    <br />
+    <h1>Selected time: {{ time }}</h1>
+    <br />
+    <h1>Number Of seats selected: {{ seats }}</h1>
+    <br/>
+    <button
+      type="button"
+      class="btn btn-primary"
+      style="float: left"
+      (click)="edit()"
+    >
+      <span>Edit</span>
+    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div style="float: right">
+      <button
+        type="button"
+        class="btn btn-primary"
+        style="align-items: center"
+        (click)="paymentConfirmation()"
+      >
+        <span>Next</span>
+      </button>
+      <br/>
+    </div>
+    <br/>
+  </div>
+</div>
+  <br/>

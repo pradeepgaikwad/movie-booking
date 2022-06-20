@@ -1,0 +1,10 @@
+
+.imgsize {
+    float: left;
+    padding: 5px;
+    width: 100%;
+}
+
+.imgsize img {
+    height: 300px;
+}

@@ -1,19 +1,5 @@
-<!-- 
-<div class="container" class="shifting">
-<h3>PMO Utility Management</h3>
-<div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
-<div>
-PS Number: <input type="text" name="username" [(ngModel)]="username"/>
-<br><br/>
-Password :    <input type="password" name="password" [(ngModel)]="password"/>
-<br><br/>
-<button class="btn btn-success" (click)=login()>Login</button>
-</div>
-</div> -->
-<!-- <app-menu></app-menu> -->
 <div class="container" class="shifting">
     <h3>ZIZA</h3>
-<!-- <div class="alert alert-warning" ></div> -->
 <div class="alert alert-warning" *ngIf="invalidLogin">{{errorMessage}}</div>
 <form role="form" class="form-validation" [formGroup]="loginForm">
     <div class="form-row">
@@ -25,10 +11,12 @@ Password :    <input type="password" name="password" [(ngModel)]="password"/>
         <label>Password</label>
         <input type="password" class="form-control" formControlName="password">
       </div>
-    </div>
-    <div class="form-row">
-<button type="button" class="btn btn-primary" (click)="login(loginForm.value)">Login</button>
-    </div>
+    </div><br/><br/><br/>
+    
 </form>
-
+<div class="form-row">
+  <button type="button" class="btn btn-primary" (click)="login(loginForm.value)">Login</button>
+      </div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
