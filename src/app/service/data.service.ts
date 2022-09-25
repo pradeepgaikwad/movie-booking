@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Movie } from '../model/movie.model';
+import { MoviesInTheatre } from '../model/movies-in-theatre.model';
+import { Theatre } from '../model/theatre.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,8 @@ export class DataService {
   public subscriber$ = this.observer.asObservable();
 
   private movieDetails : Movie | undefined ;
+
+  private moviesInTheatre : MoviesInTheatre[] | undefined;
 
   constructor() { }
 
@@ -22,4 +26,13 @@ export class DataService {
   getData() {
     return this.movieDetails;
   }
+
+  setMoviesInTheatrerDetails(theatres : MoviesInTheatre[]){
+    this.moviesInTheatre = theatres;
+  }
+
+  getMoviesInTheatrer(){
+    return this.moviesInTheatre;
+  }
+
 }

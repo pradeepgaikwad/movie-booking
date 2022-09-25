@@ -1,5 +1,18 @@
-    <div class="container">
-        <div class="row imgsize" >
+    <div class="container">        
+        <div *ngFor="let theatre of moviesInTheatre;let i = index">
+            <div class="row imgsize" >
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                <button style="border: none;" (click)="handleClick()">
+                <!-- <img src="assets/images/RRR.png" alt="RRR"> -->
+                <h1>{{theatre.movie1.name}}</h1>
+            <h1>{{theatre.theatre1.theatreName}}</h1>
+            <h1>{{theatre.theatre1.theatreLocation}}</h1>
+            <h1>{{theatre.theatre1.theatreCity}}</h1>
+            </button>&nbsp;&nbsp;&nbsp;
+        </div>
+        </div>
+
+      <!--  <div class="row imgsize" >
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
                 <button style="border: none;" (click)="handleClick()">
                 <img src="assets/images/RRR.png" alt="RRR">
@@ -52,7 +65,7 @@
             </button>
             &nbsp;&nbsp;&nbsp;
             </div>
-        </div>
+        </div>-->
         
        
     </div>

@@ -71,4 +71,10 @@ export class HttpAPIService {
     let urlpath = baseUrl.concat("logout");
     return this.http.post<any>(urlpath,"");
    }
+
+   getTheatreDetails(url:any) : Observable<any>{
+    let baseUrl ='http://localhost:8080/';
+    let urlpath = baseUrl.concat(url);
+    return this.http.get<any>(urlpath);;
+   }
 }
